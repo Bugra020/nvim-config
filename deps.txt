@@ -1,0 +1,3 @@
+ripgrep for live grep in telescopep
+nerd fonts for glyphs in neotree and lazy
+neovim version at least v0.10
