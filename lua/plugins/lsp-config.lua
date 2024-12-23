@@ -16,19 +16,19 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local cap = require("cmp_nvim_lsp").default_capabilities()
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
+				capabilities = { cap },
 			})
 
 			lspconfig.clangd.setup({
-				capabilities = capabilities,
+				capabilities = cap,
 			})
 
 			lspconfig.pyright.setup({
-				capabilities = capabilities,
+				capabilities = cap,
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
